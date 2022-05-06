@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import {Provider} from 'react-redux';
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { BrowserRouter } from "react-router-dom";
 
 // Reducers
 import authReducer from './Controllers/Redux/authSlice';
@@ -19,13 +20,18 @@ const reducer = combineReducers({
 })
 
 const store = configureStore({
-    reducer
-})
+    reducer,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: false
+  }),
+  })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-    <App />
-    </Provider>
+      <BrowserRouter>
+       <App />
+      </BrowserRouter>
+    </Provider>,
 );
 

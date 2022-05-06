@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
 import Login from './Views/LogIn/login';
 
 
@@ -18,7 +19,11 @@ function App() {
       <>
         {!auth.LoggedIn ? <Login /> :
           <div className='App'>
-            <h1>App</h1>
+            <Routes>
+              <Route path="*" element={<main>NOT FOUND</main>} />
+              <Route path="/NewEvent" element={<NewEvent />} />
+              <Route path = "/all-events" element = {<ViewEvents />} />
+            </Routes>
           </div>
         }
       </>
