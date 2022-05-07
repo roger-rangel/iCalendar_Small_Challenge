@@ -21,7 +21,6 @@ import { FaReact, FaTimes } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 import { VscDashboard } from "react-icons/vsc";
 
-
 const NavUrl = ({ url, icon, description }) => {
   
   const { nav, setNav } = useContext(NavContext);
@@ -69,11 +68,7 @@ const Navbar = () => {
             description="Calendar"
           />
           
-          
-          
           <NavUrl url="users" icon={<MdPeopleOutline />} description="Users" />
-
-         
           
           {/* SECOND CATEGORY */}
           <span className={`${styles.categories} ${styles.second_category}`}>
