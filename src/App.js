@@ -10,10 +10,12 @@ import './App.css';
 
 import NewEvent from './Views/Pages/NewEvent/newEvent';
 import ViewEvents from './Views/Pages/ViewEvents/viewEvents';
-import Dashboard from './Views/Pages/Dashboard/Dashboard';
-
+import Calendar from './Views/Pages/Calendar/Calendar';
+import Modal from 'react-modal';
 
 import NavContext from './Context/NavContext';
+
+Modal.setAppElement('#root')
 
 function App() {
   const { auth } = useSelector(state => state);
@@ -31,7 +33,7 @@ function App() {
                 content={
                   <Routes>
                     <Route path="*" element={<main>NOT FOUND</main>} />
-                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/" element={<Calendar />} />
                     <Route path="/NewEvent" element={<NewEvent />} />
                     <Route path = "/all-events" element = {<ViewEvents />} />
                   </Routes>
