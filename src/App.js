@@ -8,6 +8,7 @@ import Container from './Views/Container/Container';
 import RightNavbar from './Views/RightNavbar/RigthNavBar';
 import './App.css';
 
+
 import NewEvent from './Views/Pages/NewEvent/newEvent';
 import ViewEvents from './Views/Pages/ViewEvents/viewEvents';
 import Calendar from './Views/Pages/Calendar/Calendar';

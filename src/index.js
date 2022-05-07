@@ -6,6 +6,7 @@ import App from './App';
 import {Provider} from 'react-redux';
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { BrowserRouter } from "react-router-dom";
+import "react-datetime/css/react-datetime.css";
 
 // Reducers
 import authReducer from './Controllers/Redux/authSlice';
