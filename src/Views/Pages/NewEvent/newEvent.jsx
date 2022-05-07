@@ -21,7 +21,7 @@ const NewEvent = ({isOpen, onClose, onEventAdded}) => {
 
     return (
         <Modal isOpen={isOpen} onRequestClose={onClose}>
-            <form onSubmit={onSubmit}>
+            <form style={{width: '50%', position: 'absolute', marginTop: '3rem'}} onSubmit={onSubmit}>
                 <input placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
                 <div>
                     <label>Start Date</label>

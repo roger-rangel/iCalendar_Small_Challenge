@@ -35,7 +35,7 @@ function App() {
                   <Routes>
                     <Route path="*" element={<main>NOT FOUND</main>} />
                     <Route path="/" element={<Calendar />} />
-                    <Route path="/NewEvent" element={<NewEvent />} />
+                    <Route path="/create-event" element={<NewEvent />} />
                     <Route path = "/all-events" element = {<ViewEvents />} />
                   </Routes>
                 }

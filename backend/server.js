@@ -17,7 +17,7 @@ mongoose.connect(process.env.DB_URL, {
 
 const app = express()
 
-const PORT = process.env.PORT || 3500
+const PORT = process.env.PORT || 3000
 
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
@@ -26,7 +26,7 @@ app.use(bodyParser.json())
 
 app.use('/auth', require('./Controller/Routes/auth'))
 
-app.use("/api/icalendar", require('./Controller/CalendarController'))
+app.use("/", require('./Controller/CalendarController'))
 
 app.listen(PORT, () => {
     console.log('listening on ' + PORT);
