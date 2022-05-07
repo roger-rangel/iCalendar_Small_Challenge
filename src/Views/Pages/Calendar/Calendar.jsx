@@ -26,16 +26,13 @@ const Calendar = () => {
     }
 
     async function handleEventAdd(data) {
-        await axios.post("/create-event", data.event)
+        await axios.post("/api/calendar/create-event", data.event);
     }
 
     async function handleDatesSet(data) {
        const response = await axios.get(
-           "/get-events?start=" + 
-           moment(data.start).toISOString() + 
-           "&end=" + 
-           moment(data.end).toISOString())
-       setEvents(response.data)
+           "/api/calendar/get-events?start="+moment(data.start).toISOString()+"&end="+moment(data.end).toISOString())
+       setEvents(response.data);
     }
 
     return (
@@ -53,9 +50,6 @@ const Calendar = () => {
                     <MdAddBox size={45} style={{ fill: 'rgb(85, 79, 232)' }} />
                 </button>
             </div>
-            {/* <div >
-                <button onClick={()=> setModalOpen(true)} className={styles.add_new_event}><MdAddBox size={45} style={{ fill: 'rgb(85, 79, 232)' }} /></button>
-            </div> */}
 
             <div style={{position: 'relative', zIndex: 0, padding: '2rem'}}>
                 <FullCalendar

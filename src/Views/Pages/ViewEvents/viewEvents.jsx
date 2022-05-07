@@ -12,9 +12,7 @@ export default () => {
     useEffect(() => {
         dispatch(getEvents());
     }, [dispatch]);
-    
-    console.log(events);
-    console.log(events.length);
+
     return (
         <div className='page-container'>
             <h1>All Events</h1>

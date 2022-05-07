@@ -6,7 +6,7 @@ const moment = require('moment')
 router.post("/create-event", async (req, res) => {
     const event = Event(req.body)
     await event.save()
-    res.sendStatusCode(200)
+    res.sendStatusCode(201)
 })
 
 router.get("/get-events", async (req, res) => {
