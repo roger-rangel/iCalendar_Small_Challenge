@@ -12,6 +12,7 @@ import './App.css';
 import NewEvent from './Views/Pages/NewEvent/newEvent';
 import ViewEvents from './Views/Pages/ViewEvents/viewEvents';
 import Calendar from './Views/Pages/Calendar/Calendar';
+import Users from './Views/Pages/Users/Users';
 import Modal from 'react-modal';
 
 import NavContext from './Context/NavContext';
@@ -36,6 +37,7 @@ function App() {
                     <Route path="*" element={<main>NOT FOUND</main>} />
                     <Route path="/" element={<Calendar />} />
                     <Route path="/create-event" element={<NewEvent />} />
+                    <Route path="/users" element={<Users />} />
                     <Route path = "/all-events" element = {<ViewEvents />} />
                   </Routes>
                 }

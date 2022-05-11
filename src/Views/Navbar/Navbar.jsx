@@ -75,7 +75,7 @@ const Navbar = () => {
             {nav ? "More" : <BsThreeDots />}
           </span>
 
-          <NavUrl url="all-events" icon={<MdDns />} description="All Events" />
+          {/* <NavUrl url="all-events" icon={<MdDns />} description="All Events" /> */}
         </ul>
         {/* LOGOUT BUTTON */}
         <div
