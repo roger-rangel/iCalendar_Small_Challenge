@@ -5,10 +5,10 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { FiMessageCircle } from "react-icons/fi";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 
-import People1 from "../../../assets/pics/people1.jpg";
-import People2 from "../../../assets/pics/people2.jpg";
-import People3 from "../../../assets/pics/people3.jpg";
-import People4 from "../../../assets/pics/people4.jpg";
+import People1 from "../../../assets/pics/people1.png";
+import People2 from "../../../assets/pics/people2.jpeg";
+import People3 from "../../../assets/pics/people3.png";
+import People4 from "../../../assets/pics/people4.png";
 
 const Card = ({ person_image }) => {
   return (
